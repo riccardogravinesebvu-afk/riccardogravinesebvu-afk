@@ -12,6 +12,15 @@ customer's data to production.
 
 ## Public work
 
+**[agentic-ems](https://github.com/riccardogravinesebvu-afk/agentic-ems)**: plain-language
+questions on a synthetic plant's energy data, answered three ways by the same model and scored
+against reference values: a semantic layer that compiles the SQL, text-to-SQL with the rules in
+the prompt, and text-to-SQL from the schema alone. 55 questions, five repeats each. With the rules
+the model that writes SQL made no mistake; without them it returned 12 wrong values in 275 runs,
+4 of them double counts. The semantic layer cannot double count, but outside its four metrics it
+refuses or returns ingredients, not answers. Written from scratch on synthetic data, with a
+[hosted demo](https://agentic-ems-demo.vercel.app) that replays four recorded answers.
+
 **[harness-loop](https://github.com/riccardogravinesebvu-afk/harness-loop)**: an optimizer agent
 that improves another agent by iterating on evals. 44 eval cases, 6 loops, 19 hypotheses, about
 €8.7 of API spend. Accuracy went from 45% to 87% overall, and from 40% to 67% on the cases the
